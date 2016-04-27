@@ -30,10 +30,6 @@ class YATM():
                 self.index = 0
         if 'state' in procedure:
             self.state = procedure['state']
-        # print self.output
-        # print self.index
-        # print self.state
-
 
     def run_state(self):
         current_case = self.input[self.index]
@@ -58,5 +54,4 @@ if __name__ == "__main__":
     f = open(sys.argv[1])
     program = yaml.load(f)
     yatm_microservice = YATM(program)
-    # print yatm_microservice.run_tape(2)
     yatm_microservice.run_all()
