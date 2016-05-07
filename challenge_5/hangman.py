@@ -1,6 +1,7 @@
 import telnetlib
 from words import WordSeeker
 
+
 class HangManGame():
     def __init__(self, words):
         self.tn = telnetlib.Telnet("52.49.91.111", 9988)
@@ -24,7 +25,7 @@ class HangManGame():
         secret_word = self.lines_screen[-3].split()
         self.pattern = ""
         for letter in secret_word:
-            if letter=="_":
+            if letter == "_":
                 self.pattern += "."
             else:
                 self.pattern += letter
